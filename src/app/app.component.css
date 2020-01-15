@@ -1,0 +1,32 @@
+
+
+.sombreado{
+    box-shadow: 0 5px 5px -5px blue;
+}
+
+mat-card{
+    background: rgb(216, 194, 194);
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+
+mat-drawer{
+    width: 30%;
+}
+
+.ancho-movil{
+    width: 100%;
+}
+
+.posicion{
+    position: fixed;
+    left: 85%;
+}
+
+.posicion:focus{
+    outline: none;
+}
+
+a:focus{outline: none;}

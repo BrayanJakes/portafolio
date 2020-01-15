@@ -1,0 +1,45 @@
+<div class=" bg-primary sombreado" >
+        <h4 class="text-white text-center" >{{ datos.nombre }}</h4>
+</div>
+
+<div class="row">
+    <div class="col-md-3 cursor" *ngFor="let i of datos.img" >
+            <mat-card (click)="abrirModal(i)"  >
+      
+      
+                    <img mat-card-image [src]="i" alt="Facturacion">
+              
+                </mat-card>
+    </div>
+</div>
+<br>
+<p>
+   <strong>Descripción:</strong> {{datos.descripcion}}
+</p>
+<br>
+<div *ngIf="responsive.menuAbierto" >
+    <strong>Herramientas:</strong> 
+    <img *ngFor="let img of datos.herramientas" class="ml-4 rounded-circle border-circular" [src]="img" width="60" height="50">
+    
+    <!-- <div class=" float-right" *ngFor="let img of datos.herramientas">
+        <img class="rounded-circle" [src]="img" width="80" height="50">
+        </div> -->
+</div>
+
+<div *ngIf="!responsive.menuAbierto" >
+        <div class="text-center">
+                <strong  >Herramientas:</strong>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6" *ngFor="let img of datos.herramientas">
+                    <img  class="m-1 rounded-circle border-circular" [src]="img" width="60" height="50">
+            </div>
+        </div> 
+        
+        
+        <!-- <div class=" float-right" *ngFor="let img of datos.herramientas">
+            <img class="rounded-circle" [src]="img" width="80" height="50">
+            </div> -->
+    </div>
+

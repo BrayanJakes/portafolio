@@ -1,0 +1,283 @@
+
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="over" 
+    [ngClass]="{'ancho-movil': !responsive.menuAbierto}"
+    #drawer
+    >
+    <button 
+   *ngIf="!responsive.menuAbierto"
+    mat-mini-fab color="primary"
+    (click)="drawer.close()"
+    class="posicion">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class=" bg-primary sombreado" >
+                
+          <h6 class="text-white text-center" >Información Personal
+              
+          </h6>
+      </div>
+
+      <strong>Nombre:</strong> Brayan Jakes Inojosa Infante <br>
+      <strong>Edad:</strong> 24 Años <br>
+      <strong>Nacionalidad:</strong> Venezolano <br>
+      <strong>Numero de Contacto:</strong> +584129429256 <br>
+      <strong>Email:</strong> brianjakes22@gmail.com <br>
+      
+      <div class="text-center">
+          <a href="https://www.facebook.com/BriianJakess" target="_blank">
+            <!-- <button mat-mini-fab color="primary" class="sin-focus">
+
+              <mat-icon>share</mat-icon>
+            </button> -->
+            <img src="./assets/img/facebook.svg" alt="facebook" width="50" height="50">
+          </a>
+      </div>
+
+      <br>
+     <!-- <div class="text-center">
+        <img src="../assets/img/brayan.jpg" alt="brayan" 
+                    class="border-circular mt-1 rounded-circle"
+                    height="180" width="150" >
+                    <br>
+                    <h6>Brayan Jakes Inojosa Infante
+                      <br>
+                      <br>
+                      24 Años
+                      <br>
+                      <br>
+                      Venezolano
+                    </h6>
+
+     </div> -->
+
+     <div class=" bg-primary sombreado" >
+                
+        <h6 class="text-white text-center" >Información Sobre mi persona
+            
+        </h6>
+        
+        
+      </div>
+
+     <div class="ml-1">
+        Chico de 24 años, serio, responsable, auto-didáctico, tengo mis momentos tanto laborales como no laborales donde me tomo muy enserio lo que hago.. me apasiona mucho el ámbito de la programación, saber como se hizo un programa o un juego sera siempre una curiosidad que tendré en mente y mas si lo quiero implementar a mi manera,
+        El framework web con el que mas me destaco es <strong>Angular</strong> siendo dicho framework uno de los mejores en hacer aplicaciones web al estilo SPA(Single Page Aplication), por ender gracias a esta poderosa
+        herramienta eh logrado hacer una que otra App web y demostrar mis habilidades como <strong>desarrollador Web</strong>
+     </div>
+
+    </mat-drawer>
+    <mat-drawer-content>
+      
+        
+
+        <div class="text-center animated fadeIn">
+            <div class=" bg-primary sombreado" >
+                
+              <h4 class="text-white" >Brayan Jakes Inojosa Infante
+                  <mat-icon *ngIf="responsive.menuAbierto" matTooltip="Datos Personales" class="cursor igtext-rht" (click)="drawer.toggle()" >assignment</mat-icon>
+              </h4>
+              
+              
+            </div>
+           
+        <img src="../assets/img/brayan.jpg" alt="brayan" 
+        class="border-circular mt-1 rounded-circle"
+        height="220" width="170" > 
+        <button *ngIf="!responsive.menuAbierto"
+        matTooltip="Datos Personales"
+        mat-mini-fab color="primary"
+        (click)="drawer.toggle()" 
+        class="posicion">
+            <mat-icon>assignment</mat-icon>
+          </button>
+       
+        <h6 class="pt-2">Desarrollador Web / Movil</h6>
+        
+        <img matTooltip="Angular V8" src="../assets/img/angular.png" alt="A"
+        width="60"
+        height="50"
+        class="ml-1 rounded-circle mt-1 border-circular">
+        
+        
+        
+        
+        <img matTooltip="Node.Js" src="../assets/img/node.png" alt="A"
+        width="60"
+        height="50"
+        class="ml-1 rounded-circle border-circular">
+        
+        
+        <img matTooltip="MongoDB" src="../assets/img/mongodb.png" alt="A"
+        width="60"
+        height="50"
+        class="ml-1  rounded-circle border-circular">
+        
+        <img matTooltip="MySql" src="../assets/img/mysql.png" alt="A"
+        width="50"
+        height="50"
+        class="ml-1  rounded-circle border-circular">
+        
+        <img matTooltip="Flutter" src="../assets/img/flutter.png" alt="A"
+        width="60"
+        height="50"
+        class="ml-1 rounded-circle border-circular">
+        
+        </div>
+        
+        <br>
+       
+        <div *ngIf="animaciones">
+             
+        <div class=" bg-primary sombreado animated fadeIn" >
+        
+                <h4 class="text-center text-white "> Aplicaciones Realizadas </h4>
+                  
+              </div>
+              
+              
+              <div class="container mt-3 animated fadeIn">
+              
+                <div class="row" *ngIf="responsive.menuAbierto">
+              
+                  <div class="col-md-6 col">
+                      <div class=" bg-primary sombreado" >
+                          <h6 class="text-white text-center" >De Practica</h6>
+                        </div>
+              <br>
+                    <div class="row">
+                        <div class="col-md-6 col cursor" matTooltip="Modulo de Facturación">
+                            <mat-card (click)="abrirModal('Modulo de Facturación')" >
+                    
+                    
+                                <img mat-card-image src="../assets/img/modulo-facturacion/1.png" alt="Facturacion">
+                          
+                            </mat-card>
+                        </div>
+                       
+                        <div class="col-md-6 col cursor" matTooltip="Mini red Social">
+                            <mat-card (click)="abrirModal('Mini red Social')">
+                    
+                    
+                                <img mat-card-image src="../assets/img/imgshark/6.png" alt="Red Social">
+                          
+                            </mat-card>
+                        </div>
+                    </div>
+              
+                  </div>
+                  <div class="col-md-6 col">
+              
+              
+                      <div class=" bg-primary sombreado" >
+                          <h6 class="text-white text-center" >Para Empresas</h6>
+                        </div>
+              <br>
+                    <div class="row">
+                        <div class="col-md-6 col cursor" matTooltip="Modulo de Administración y CRM">
+                            <mat-card (click)="abrirModal('Modulo de Administración y CRM')">
+                    
+                    
+                                <img mat-card-image src="../assets/img/superadmin/superadmin.png" alt="superadmin"
+                                height="120">
+                          
+                            </mat-card>
+                        </div>
+                       
+                        <div class="col-md-6 col cursor" matTooltip="CRM Chatbot">
+                            <mat-card (click)="abrirModal('CRM Chatbot')">
+                    
+                    
+                                <img mat-card-image src="../assets/img/chatbot/chatbot.png" alt="CRM Chatbot"
+                                height="120">
+              
+                          
+                            </mat-card>
+                        </div>
+                    </div>
+              
+                  </div>
+              
+                  
+              
+              
+                </div>
+               
+              
+                <div class="row" *ngIf="!responsive.menuAbierto">
+              
+                    <div class="col-md-12 ">
+                        <div class=" bg-primary sombreado" >
+                            <h6 class="text-white text-center" >De Practica</h6>
+                          </div>
+                <br>
+                      <div class="row">
+                          <div class="col-md-6 col cursor" matTooltip="Modulo de Facturación">
+                              <mat-card  (click)="abrirModal('Modulo de Facturación')" >
+                      
+                      
+                                  <img mat-card-image src="../assets/img/modulo-facturacion/1.png" alt="Facturacion">
+                            
+                              </mat-card>
+                          </div>
+                         
+                          <div class="col-md-6 col cursor" matTooltip="Mini red Social">
+                              <mat-card (click)="abrirModal('Mini red Social')">
+                      
+                      
+                                  <img mat-card-image src="../assets/img/imgshark/6.png" alt="Red Social">
+                            
+                              </mat-card>
+                          </div>
+                      </div>
+                
+                    </div>
+                    
+                    <div class="col-md-12">
+                <br>
+                
+                        <div class=" bg-primary sombreado" >
+                            <h6 class="text-white text-center" >Para Empresas</h6>
+                          </div>
+                <br>
+                      <div class="row">
+                          <div class="col-md-6 col cursor" matTooltip="Modulo de Administración y CRM">
+                              <mat-card (click)="abrirModal('Modulo de Administración y CRM')">
+                      
+                      
+                                  <img mat-card-image src="../assets/img/superadmin/superadmin.png" alt="superadmin"
+                                  height="120">
+                            
+                              </mat-card>
+                          </div>
+                         
+                          <div class="col-md-6 col cursor" matTooltip="CRM Chatbot">
+                              <mat-card (click)="abrirModal('CRM Chatbot')">
+                      
+                      
+                                  <img mat-card-image src="../assets/img/chatbot/chatbot.png" alt="CRM Chatbot"
+                                  height="120">
+                
+                            
+                              </mat-card>
+                          </div>
+                      </div>
+                
+                    </div>
+                
+                    
+                
+                
+                  </div>
+              </div>
+        </div>
+        
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+
+<router-outlet></router-outlet>
