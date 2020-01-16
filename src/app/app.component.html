@@ -76,7 +76,9 @@
             <div class=" bg-primary sombreado" >
                 
               <h4 class="text-white" >Brayan Jakes Inojosa Infante
-                  <mat-icon *ngIf="responsive.menuAbierto" matTooltip="Datos Personales" class="cursor igtext-rht" (click)="drawer.toggle()" >assignment</mat-icon>
+                  <small *ngIf="iconoMenu" >
+                    <mat-icon *ngIf="responsive.menuAbierto" matTooltip="Datos Personales" class="cursor posicion-web animated fadeIn" (click)="drawer.toggle()" >assignment</mat-icon>
+                  </small>
               </h4>
               
               
@@ -93,8 +95,11 @@
             <mat-icon>assignment</mat-icon>
           </button>
        
-        <h6 class="pt-2">Desarrollador Web / Movil</h6>
-        
+        <h6 class="pt-2">Desarrollador Web</h6>
+       
+
+          <small>
+               
         <img matTooltip="Angular V8" src="../assets/img/angular.png" alt="A"
         width="60"
         height="50"
@@ -124,6 +129,8 @@
         height="50"
         class="ml-1 rounded-circle border-circular">
         
+          </small>
+
         </div>
         
         <br>

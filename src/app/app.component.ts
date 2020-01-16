@@ -12,6 +12,7 @@ import { ResponsiveService } from './services/responsive.service';
 export class AppComponent implements OnInit {
 
   animaciones = false;
+  iconoMenu = false;
 
   constructor(public dialog: MatDialog,
               public responsive: ResponsiveService) {
@@ -23,6 +24,10 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.animaciones = true;
     }, 2600);
+
+    setTimeout(() => {
+      this.iconoMenu = true;
+    }, 4500);
   }
 
   abrirModal(nombre): void {

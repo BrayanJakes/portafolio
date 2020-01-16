@@ -25,6 +25,11 @@ mat-drawer{
     left: 85%;
 }
 
+.posicion-web{
+    position: fixed;
+    left: 95%;
+}
+
 .posicion:focus{
     outline: none;
 }
